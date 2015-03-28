@@ -1,4 +1,4 @@
-![div](http://imgur.com/cNBAjEe)
+![div](http://i.imgur.com/cNBAjEe.png)
 
 xvso (called X vs O)
 ==========================
