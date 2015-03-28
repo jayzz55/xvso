@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X VS O</title>
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+  <link rel="stylesheet" href="stylesheets/font-style.css">
+  <link rel="stylesheet" href="stylesheets/game-style.css">
+  <link rel="stylesheet" href="stylesheets/slide-style.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/plugins/ScrollToPlugin.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/plugins/ColorPropsPlugin.min.js"></script>
+  <script src="javascripts/jquery.min.js"></script>
+  <script src="javascripts/underscore.min.js"></script>
+  <script src="javascripts/slide-animation.js"></script>
+  <script src="javascripts/summonCat.js"></script>
+  <script src="javascripts/app.js"></script>
+
+
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#slide-1">Home</a></li>
+      <li><a href="#slide-2">Slide 2</a></li>
+      <li><a href="#slide-3">Slide 3</a></li>
+      <li><a href="#slide-4">Play!</a></li>
+    </ul>
+  </nav>
+
+  <div class="slides-container">
+    <div class="slide" id="slide-1">
+      <span id="x-head"><h1 >X</h1></span>
+      <span id="o-head"><h1 >O</h1></span>
+      <span id="vs-head"><h1 >VS</h1></span>
+      <span class="go-next" id= "continue">Play game!</span>
+    </div>
+    <div class="slide" id="slide-2">
+      <div class="option grid">
+        Grid size: 
+        <span class="decreaseBtn" id="grid-decrease"><</span>
+        <span id="gridSize">3</span>
+        <span class="increaseBtn" id="grid-increase">></span>
+      </div>
+      <div class="option round">
+        # of rounds:
+        <span class="decreaseBtn" id="round-decrease"><</span>
+        <span id="roundNum">5</span>
+        <span class="increaseBtn" id="round-increase">></span>
+      </div>
+      <div class="option timer">
+        Timer (secs):
+        <span class="decreaseBtn" id="timer-decrease"><</span>
+        <span id="timerNum">10</span>
+        <span class="increaseBtn" id="timer-increase">></span>
+      </div>
+      <span class="go-next" id= "continue">Almost there!</span>
+    </div>
+    <div class="slide" id="slide-3">
+      <div class="title">
+        Tool of war:
+      </div>
+      <div class="ability">
+        <img class = "icon" id="icon-1" src="images/kitty.svg"><br/>
+        Summon a magical cat to aid you in disrupting your opponent.
+      </div>
+      <div class="ability">
+        <img class = "icon" id="icon-2" src="images/timer.svg"><br/>
+        Your opponent is taking too long to think? Force them to move within 3 seconds!
+      </div>
+      <div class="ability">
+        <img class = "icon" id="icon-3" src="images/bomb.svg"><br/>
+        randomly blow up any 3 cell-boxes in the grid. Use with caution!
+        <div style="color:red">!! Under Construction!!</div>
+        <div style="color:blue">This bomb is too powerful and will be released on version 2.</div>
+      </div>
+      <span class="go-last" id= "continue">Let the WAR begins!</span>
+    </div>
+    <div class="slide slide-4" id="slide-4">
+        <div class="centered">
+          <section class="game">
+            <section class="game-container">
+            <img id='cat1' style="position:absolute; left: 0px;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+            <img id='cat2' style="position:absolute; left: 0px;" src="images/dance_cat_1.gif">
+            </section>
+
+            <section class="player-container">
+              <div class="player-indicator">
+                <label for="player-turn">Player turn:  <span id="player-turn"></span></label><br/>
+                <label for="timer">Time limit:   <span id="timer"></span></label>
+              </div>
+
+            </section>  
+            <p id="game-head"><span id="roundCount"></span></p>
+            <span class = "menuBtn" id="resetBtn">Reset game</span>
+            <span class = "menuBtn" id="nextRoundBtn">Next round</span>
+            <p id="p1Menu">
+              X: <span id="p1WinCount"></span>
+              <img class = "skills skill-1" id='p1Skill1' src="images/kitty.svg">
+              <img class = "skills skill-2" id='p1Skill2' src="images/timer.svg">
+              <img class = "skills skill-3" id='p1Skill3' src="images/bomb.svg">
+            </p>
+            <p id="p2Menu">
+              O: <span id="p2WinCount"></span>
+              <img class = "skills skill-1" id='p2Skill1' src="images/kitty.svg">
+              <img class = "skills skill-2" id='p2Skill2' src="images/timer.svg">
+              <img class = "skills skill-3" id='p2Skill3' src="images/bomb.svg">
+            </p>
+          </section>
+        </div>
+    </div>
+  </div>  
+
+</body>
+</html>
